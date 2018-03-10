@@ -131,7 +131,7 @@ def run(host,
         query = get_templated_option(cfg, section_name, "query", template_options)
 
         if cfg.has_option(section_name, "limit"):
-            limit = get_templated_option(cfg, section_name, "limit", template_options)
+            limit = int(get_templated_option(cfg, section_name, "limit", template_options))
 
         if cfg.has_option(section_name, "from"):
             search_from = get_templated_option(cfg, section_name, "from", template_options)
